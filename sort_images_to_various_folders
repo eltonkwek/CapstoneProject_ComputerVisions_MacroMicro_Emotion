@@ -76,3 +76,27 @@ for file in os.listdir(source):
         shutil.copy(name, surprised_folder)
     else :
         print ('file does not exist', name)
+
+# optional to check
+# print(angry)
+# print(disgust)
+# print(happy)
+# print(sad)
+
+import os
+currentDirectory = os.getcwd()
+print(currentDirectory)
+
+# importing os module  
+import os 
+  
+# importing shutil module  
+import shutil
+path = 'C:/Users/elton/Google Drive/AI Course/Capstone Project/Sourced Database/3.jaffedbase/source'
+print("Before copying file:") 
+print(os.listdir(path)) 
+
+newPath = shutil.copy('KA.AN1.39.tiff', '/source/angry')
+#this works 
+
+print(angry_l)
