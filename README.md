@@ -1,5 +1,5 @@
 # CapstoneProject_ComputerVisions_MacroMicro_Emotion
-This repository is for the storage of code related to my capstone project relating to computer vision for micro/macro emotion for X0PA Pte Ltd
+This repository is for the storage of code related to my capstone project relating to computer vision for micro/macro emotion for XXXX XX Pte Ltd
 
 Disclaimers: 
  - This is not the typical format of what a README.md should contain
