@@ -1,0 +1,78 @@
+import pandas as pd
+
+angry = pd.read_table("angry.txt", names=['file'])
+disgust = pd.read_table("disgust.txt", names=['file'])
+happy = pd.read_table("happy.txt", names=['file'])
+sad = pd.read_table("sad.txt", names=['file'])
+surprised = pd.read_table("surprised.txt", names=['file'])
+
+#df1_angry = angry.append(angry)
+#df2_disgust = disgust.append(disgust)
+#df3_happy = happy.append(happy)
+#df4_sad = sad.append(sad)
+#df5_surprised = surprised.append(surprised)
+
+#data_wext.to_csv("allemotions.csv", index=0)
+
+import os
+import shutil
+
+source = 'insert your own folder name' #test folder'
+
+angry_folder = 'insert your own folder name' #test folder
+disgust_folder = 'insert your own folder name' #test folder
+happy_folder = 'insert your own folder name' #test folder
+sad_folder = 'insert your own folder name' #test folder
+surprised_folder = 'insert your own folder name' #test folder
+
+#must change the header "file" specifically, otherwise shutil will not iterate
+angry_l = angry['file'].tolist()
+disgust_l = disgust['file'].tolist()
+happy_l = happy['file'].tolist()
+sad_l = sad['file'].tolist()
+surprised_l = surprised['file'].tolist()
+
+#move to angry
+for file in os.listdir(source):
+  if file in angry_l:
+    name = os.path.join(source, file )
+    if os.path.isfile(name) :
+        shutil.copy(name,angry_folder)
+    else :
+        print ('file does not exist', name)
+
+#move to disgust
+for file in os.listdir(source):
+  if file in disgust_l:
+    name = os.path.join(source, file )
+    if os.path.isfile(name) :
+        shutil.copy(name,disgust_folder)
+    else :
+        print ('file does not exist', name)
+        
+#move to happy
+for file in os.listdir(source):
+  if file in happy_l:
+    name = os.path.join(source, file )
+    if os.path.isfile(name) :
+        shutil.copy(name, happy_folder)
+    else :
+        print ('file does not exist', name)  
+        
+#move to happy
+for file in os.listdir(source):
+  if file in sad_l:
+    name = os.path.join(source, file )
+    if os.path.isfile(name) :
+        shutil.copy(name, sad_folder)
+    else :
+        print ('file does not exist', name) 
+        
+        #move to disgust
+for file in os.listdir(source):
+  if file in surprised_l:
+    name = os.path.join(source, file )
+    if os.path.isfile(name) :
+        shutil.copy(name, surprised_folder)
+    else :
+        print ('file does not exist', name)
